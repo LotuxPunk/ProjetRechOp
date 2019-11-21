@@ -2,12 +2,16 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define INITIAL_CAPACITY 2
+
 bool isHullDobell(int a, int c, int m, int x0);
+void decompose(int n, int* facteursPremier);
 int pgcd(int, int);
+void push(int* arr, int index, int value, int* size, int* capacity);
 
 void main(void)
 {
-	int a, c, m, x0;
+	/*int a, c, m, x0;
 	char* buffer;
 
 	printf("Encodez le a : ");
@@ -24,22 +28,16 @@ void main(void)
 
 	printf("Encodez le x0 : ");
 	fgets(buffer, INT_MAX, stdin);
-	x0 = atoi(buffer);
+	x0 = atoi(buffer);*/
+
+	int* arr = malloc(INITIAL_CAPACITY * sizeof(int));
+
+	decompose(55, &arr);
+	system("pause");
 }
 
 bool isHullDobell(int a, int c, int m, int x0)
 {
 	bool cond1 = pgcd(c, m) == 1;
-}
-
-int pgcd(int a, int b)
-{
-	int r;
-	while (b != 0)
-	{
-		r = a % b;
-		a = b;
-		b = r;
-	}
-	return a;
+	bool cond2 = (a - 1) % (c - 1) == 0;
 }
