@@ -33,7 +33,16 @@ bool isHullDobell(int a, int c, int m, int x0)
 {
 	bool cond1 = pgcd(c, m) == 1;
 	bool cond2 = (a - 1) % (c - 1) == 0;
+	bool cond3;
 
+	if (m % 4 == 0)
+	{
+		cond3 = ((a - 1) % p == 0);
+	}
+	else
+	{
+		cond3 = true;
+	}
 }
 
 int pgcd(int a, int b)
