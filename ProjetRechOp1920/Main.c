@@ -37,7 +37,7 @@ bool isHullDobell(int a, int c, int m, int x0)
 
 	if (m % 4 == 0)
 	{
-		cond3 = ((a - 1) % p == 0);
+		cond3 = ((a - 1) % 4 == 0);
 	}
 	else
 	{
