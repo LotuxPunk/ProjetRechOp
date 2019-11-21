@@ -2,6 +2,8 @@
 #include <stdlib.h>
 #include <stdbool.h>
 
+#define INITIAL_CAPACITY 2
+
 bool isHullDobell(int a, int c, int m, int x0);
 int pgcd(int, int);
 
@@ -30,7 +32,7 @@ void main(void)
 bool isHullDobell(int a, int c, int m, int x0)
 {
 	bool cond1 = pgcd(c, m) == 1;
-
+	bool cond2 = (a - 1) % (c - 1) == 0;
 	bool cond3;
 
 	if (m % 4 == 0)
