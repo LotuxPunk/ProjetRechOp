@@ -1,0 +1,46 @@
+---* DA Projet
+Obtenir a, c, m, X0
+module(isHullDobell;a, c, m, X0;isValide)
+if (isValide)
+paragraphe(Traitement)
+else
+sortir "La suite n'est pas valide"
+endif
+----
+
+module(isHullDobell;a, c, m, X0;isValide)
+---* isHullDobell
+
+ cond1 = 
+module(PGCD;a, b; PGCD==1)
+
+cond2 = (a - 1) % (c - 1) == 0
+
+if (m % 4 == 0)
+cond3 = ((a - 1) % 4 == 0);
+else
+cond3 = true
+endif
+return (cond1 & cond 2 & cond3)
+----
+
+module(PGCD;a, b; PGCD)
+---* PGCD
+do while (b != 0)
+r = a % b
+a = b
+b = r  
+enddo
+return a
+----
+
+module(GénérerNombreAléatoire;;)
+---* GénérerNombreAléatoire
+x1 = (a*x0+c)%m 
+x0=x1
+----
+
+paragraphe(Traitement)
+---* Traitement
+
+------
